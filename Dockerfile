@@ -1,6 +1,9 @@
 FROM peterevans/vegeta:6.7.0
 
-COPY config config
-CMD ulimit -n 99999
+ARG RATE_PER_SECOND
+ARG DURATION
 
-CMD vegeta attack -targets config -format http -rate=50000 -duration=30s | tee results.bin | vegeta report
+COPY config config
+
+CMD ulimit -n 99999
+CMD vegeta attack -targets config -format http -rate=${RATE_PER_SECOND} -duration=${DURATION} | tee results.bin | vegeta report
