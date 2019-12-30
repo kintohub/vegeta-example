@@ -1,4 +1,4 @@
-# KintoHub {name}-example
+# KintoHub Vegeta Example
 
 ## Overview
 TODO: Cool description / goal of what technology you are bringing onto the plate with what language. This should be sweet and concise.
